@@ -1,0 +1,252 @@
+@CHARSET "UTF-8";
+/* CSS Document  */
+
+/*	Suggerimenti per DTD Strict
+    - sono esclusi tutti gli attributi del tag <body> tranne quelli comuni (vedi sopra)
+    - non si può usare align per l'allineamento del testo in paragrafi e altri elementi
+    - non è supportato l'attributo target per i link e i form
+    - per una tabella (<table>) non si possono specificare il bordo, il colore di sfondo (bgcolor) o l'allineamento (align)
+    - le celle di tabella (<td>) non supportano il colore di sfondo, la larghezza (width), l'altezza (height). Supportano invece l'allineamnto del testo (align)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+    background-color: #F2F2F2;
+    font-size: 10px;			/* => implica che  1em = 12px */
+    font-family: verdana,helvetica,arial,sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	color: #333333;
+    /*font-family: Georgia,"Times New Roman",Times,serif;*/
+}
+
+h1{font-size: 2.2em;}
+h2{font-size: 1.8em;}
+h3{font-size: 1.4em; }
+h4{font-size: 1.2em; font-style: italic; }
+
+* { border-width: 0 !important; } 
+
+div {
+    border-width: 0.2em; 
+    border-style: solid; 
+}
+
+input { 
+	background-repeat: no-repeat;     
+	background-color: white;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+
+a { text-decoration: none; }
+a:link { color: #00C3DB;}
+a:hover { color: #00C3DB; }
+a:visited { color: #008291; }
+
+div.clearer {clear: both; line-height: 0; height: 0;}
+
+div.linemenu {
+    background: none repeat scroll 0 0 #333333;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    height: 0.5em;
+}
+
+span.required {color: #C20000;}
+
+/* IE6 incompatibile
+input { [type="text"], input[type="password"], textarea {
+*/
+
+div.boxelementi {
+	background: none repeat scroll 0 0 #E6E6E6;
+	border: 1px solid #CCCCCC;
+    border-radius: 0.3em 5em 5em 5em;
+	margin: 1em 1em;
+	padding: 1em 1em;
+	display: -moz-inline-stack;
+	display: inline-block;
+}
+
+div#wrapper, div#header, div#left_navbar, div#content, div#footer {
+	padding: 1em;
+	}
+
+div#wrapper {
+	display: none;		/* se sono attivi i Javascript verrà attivata la visualizzazione */
+    width: 80em;
+    margin: 0 auto;
+    overflow: hidden;
+    background:#F2F2F2;
+    font-size: 1.2em;
+    position: relative;
+    border-color: lime;
+}
+
+div#header {
+	width: inherit;		/* eredita da #wrapper*/
+    text-align: center;
+    border-color: blue;
+    clear: both;
+}
+
+div#left_navbar {
+	width: 17em;	/* in em perchè dipende dalla scritta "Resta connesso" */
+    float: left;		/* il contenuto fluttuerà a destra */
+    text-align:left;
+    border: black;
+}
+
+div#content {
+	width: 59em;
+    text-align:justify;
+    border-color: red;
+    float: left;
+}
+
+div#alarm { border-color: blue; width:45em; margin:1em auto; }
+
+div#alarm img, div#alarm h2, div#alarm p { 
+	display: inline;
+	margin: 0em 0em 0em 1em;
+	vertical-align: middle;
+}
+
+div#footer {
+    text-align: center;
+    border-color: purple;
+    clear: left;
+}
+
+
+input.in-srch  { background-image: url("../img/16x16/magnifier.png"); }
+input.in-usrnm { background-image: url("../img/16x16/user.png"); }
+input.in-pswd  { background-image: url("../img/16x16/padlock.png"); }
+
+.signin-box .passwd-label,
+.signin-box .usernm-label,
+.signin-box input#usernm,
+.signin-box input#passwd,
+.signin-box input#signIn {
+    display: block;
+    margin: 0 0 0.5em;
+    width: 86%;	/* circa #left_navbar.width(180px) - 2* #left_navbar.padding(12px) */
+}
+
+.signin-box input#usernm, .signin-box input#passwd {
+	border: 0.1em solid #BFBFBF;
+	background-position: 0.3em 0.3em;
+	padding-left: 25px;		/* in "px" perchè dipende dalla dimensione dell immagine di sfondo */
+	height: 1.8em;
+}
+
+.signin-box input#signIn { /*  [type="submit"] { */
+	display: inline;
+    height: 3em;
+    width: 5em;
+    margin: 0 0 0.5em;
+    background-color: #00C3DB;
+}
+
+.persistentCookie {
+	display: inline;
+    margin: 0em 0em 0.5em;
+}
+
+.signin-box h3{
+	text-align: center;
+    margin: 1em 0em 1em;
+}
+
+.margineUD{ margin: 1em 0em 1em; }
+
+
+
+div#menu-icone {
+	margin: 5em auto;
+	overflow: hidden;
+	border-color: yellow;
+}
+
+div#menu-icone a {
+	display: block;
+	float: left;
+	min-width: 128px;
+    padding-top: 128px;		/* per posizionare la scritta Es."SVEGLIA"*/
+	margin-left: 3.3em;
+	background: transparent no-repeat left top;
+	text-align: center;	
+}
+
+div#menu-icone a em {
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+/* deve funzionare solo l'hover */
+div#menu-icone a:visited, div#menu-icone a:link { color: #333333; }
+div#menu-icone a:hover { color: #00C3DB; }
+
+div#menu-icone a.link-addrBook128 { background-image: url("../../templates/img/128x128/address_book.png"); }
+div#menu-icone a.link-calendar128 { background-image: url("../../templates/img/128x128/calendar.png"); }
+div#menu-icone a.link-calc128 { background-image: url("../../templates/img/128x128/calculator.png"); }
+div#menu-icone a.link-alarm128 { background-image: url("../../templates/img/128x128/alarm.png"); }
+
+
+div#registr {
+	/* margin: 5em auto; */
+}
+
+/* form#register-form { width: 250px; } */
+
+form#register-form ul {
+	list-style: none;
+}
+
+form#register-form ul li {
+	margin: 0.5em auto;
+	vertical-align: middle;
+}
+
+form#register-form input[type="text"], 
+form#register-form input[type="password"], 
+form#register-form textarea {
+	border: 0.1em solid #BFBFBF;
+	background-position: 0.3em 0.3em;
+	padding-left: 2em;		/* in "px" perchè dipende dalla dimensione dell immagine di sfondo */
+	height: 1.8em;
+	width: 20em;
+}
+
+form#register-form input#register {
+	border: 0.1em solid #BFBFBF;
+/*	background-position: 0.3em 0.3em;
+	margin: 1em 0;	
+*/
+	height: 3em;
+	width: 6em;
+	background-color: #C20000;
+	font-weight: bold;
+}
+
+form#register-form input.input-noico { padding-left: 0.3em !important; width: 21.7em !important; }
+

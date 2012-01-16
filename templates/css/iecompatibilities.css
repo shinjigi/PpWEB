@@ -1,0 +1,38 @@
+div.boxelementi {
+    /* di seguito >> http://foohack.com/2007/11/cross-browser-support-for-inline-block-styling/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+input#search {	background-image: url("../img/16x16/magnifier.gif"); }
+input#usernm  {	background-image: url("../img/16x16/user.gif"); }
+input#passwd  {	background-image: url("../img/16x16/padlock.gif"); }
+
+div#menu-icone {zoom: 1;		/* per il Fix IE5+ dei contenitori di float */}
+
+div#menu-icone a {
+	width: 128px;
+	margin-left: 1em;
+}
+
+div#menu-icone a.link-addrBook128 { background-image: url("../../templates/img/128x128/address_book.gif"); }
+div#menu-icone a.link-calendar128 { background-image: url("../../templates/img/128x128/calendar.gif"); min-width: 128px;}
+div#menu-icone a.link-calc128 { background-image: url("../../templates/img/128x128/calculator.gif"); }
+div#menu-icone a.link-alarm128 { background-image: url("../../templates/img/128x128/alarm.gif"); }
+
+
+
+form#register-form input#nome,
+form#register-form input#cognome,
+form#register-form input#email,
+form#register-form input#reg-usernm,
+form#register-form input#passwd {
+	border: 1px solid #BFBFBF;
+	background-position: 0.3em 0.3em;
+	padding-left: 2em;		/* in "px" perchè dipende dalla dimensione dell immagine di sfondo */
+	height: 1.8em;
+	width: 20em;
+}
+
